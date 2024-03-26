@@ -1,0 +1,217 @@
+﻿body {
+    background-image: url("fon1.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+.header {
+    width: calc(100% - 20px);
+    margin: 15px auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: #2cf477;
+    text-align: center;
+    font-size: 2em;
+    font-family: "MS Sans Serif";
+    border-radius: 15px;
+}
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+    .search-bar,
+    .login-form {
+        width: 100%; 
+        height: auto; 
+        margin-top: 10px; 
+        text-align: center;
+    }
+    .login-form {
+        margin-bottom: 0; 
+    }
+ .search-bar button,
+        .login-form button {
+            width: 100%; 
+            height: 50px; 
+            margin-top: 10px; 
+            border-radius: 10px; 
+            text-align: center; 
+            font-size: 16px; 
+        }
+        .search-bar input[type="text"],
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            width: calc(100% - 40px); 
+            height: 50px;
+            margin-top: 10px; 
+            border-radius: 10px; 
+            text-align: center;
+            font-size: 16px;
+        }
+    .search-bar input[type="text"] {
+        font-size: 16px; 
+    }
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (min-width: 769px) {
+    .header {
+        flex-direction: row;
+    }
+
+    .search-bar,
+    .login-form {
+        width: auto;
+        margin-top: 0;
+        margin-left: 10px; 
+    }
+        .login-form input[type="password"],
+        .login-form input[type="text"] {
+            align-self: center;
+            font-size: 16px;
+            border-radius: 10px;
+            padding: 5px 10px;
+            text-align: center;
+        }
+        .search-bar input[type="text"],
+        .search-bar button,
+        .login-form button {
+            padding: 5px 10px;
+            font-size: 16px;
+            border-radius: 10px;
+            border: none;
+            text-align: center;
+        }
+}
+
+.search-bar button,
+.login-form button {
+    background-color: #2cf477;
+    color: black;
+    cursor: pointer;
+}
+    .login-form button:hover,
+    .search-bar button:hover {
+        background-color: white;
+    }
+.dropbtn {
+    background-color: black;
+    color: #2cf477;
+    opacity: 0.8;
+    padding: 10px;
+    width: 250px;
+    font-size: 20px;
+    border-radius: 10px;
+    font-family: "MS Sans Serif";
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 250px;
+    z-index: 1;
+    border-radius: 20px;
+}
+
+    .dropdown-content a {
+        color: #2cf477;
+        font-size: 20px;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+        .dropdown-content a:hover {
+            color: white;
+        }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.layout {
+    max-width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: auto;
+    gap: 10px;
+    margin-top: 20px;
+    margin-block: 20px;
+}
+
+    .layout div {
+        background-color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 30px;
+        color: black;
+        font-family: "MS Sans Serif";
+        border-radius: 20px;
+    }
+
+a {
+    color: #2cf477;
+    text-decoration: none;
+    font-family: "MS Sans Serif";
+}
+
+    a:hover {
+        color: black;
+    }
+
+@media (max-width: 768px) {
+    .c1, .c2, .c3, .c4, .c5 {
+        grid-column: 1 / -1;
+        grid-row: auto;
+    }
+
+    .layout {
+        grid-template-columns: 100%;
+    }
+}
+
+@media (min-width: 769px) {
+    .c1 {
+        grid-column: span 2;
+        grid-row: span 70;
+    }
+
+    .c2, .c3 {
+        grid-column: 3/5;
+        grid-row: span 35;
+    }
+
+    .c4 {
+        grid-column: 1 / 5;
+        grid-row: span 70;
+    }
+
+    .c5 {
+        grid-column: 1 / 5;
+        grid-row: span 2;
+    }
+}
+
+.footer {
+    width: calc(100% - 20px);
+    margin: 10px auto;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: #2cf477;
+    text-align: center;
+    font-size: 25px;
+    font-family: "MS Sans Serif";
+    border-radius: 1em;
+}
